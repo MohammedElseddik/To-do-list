@@ -1,6 +1,7 @@
 const addForm = document.querySelector('.add__task');
 const list = document.querySelector('.tasks__body');
 const todoTask = document.getElementById('add-task');
+const searchInput = document.querySelector('.form-control');
 
 // Add Tasks section
 
@@ -20,6 +21,7 @@ addForm.addEventListener('submit', (e) => {
     }
 });
 
+
 //Delete Tasks section
 
 list.addEventListener('click', (e) => {
@@ -27,4 +29,28 @@ list.addEventListener('click', (e) => {
     if (e.target.classList.contains('trash-icon')) {
         e.target.parentElement.remove();
     }
+});
+
+
+// Search and Filering the tasks
+
+const filterTasks = (filterTerm) => {
+    Array.from(list.children).filter((task) => {
+        return task.textContent.includes(filterTerm);
+    }).forEach((task) => {
+        task.classList.remove('filteredTasks')
+    });
+
+    Array.from(list.children).filter((task) => {
+        return !task.textContent.includes(filterTerm);
+    }).forEach((task) => {
+        task.classList.add('filteredTasks')
+    });
+};
+
+searchInput.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    const filterTerm = searchInput.value.trim();
+    console.log(filterTerm);
+    filterTasks(filterTerm);
 });

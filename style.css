@@ -109,3 +109,7 @@ label {
 .trash-icon:hover {
   transform: scale(1.3);
 }
+
+.filteredTasks {
+  display: none !important;
+}
