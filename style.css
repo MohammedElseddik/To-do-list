@@ -4,15 +4,16 @@
 
 body {
   background-color: #34325c;
+  color: #fff;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3em;
+  gap: 2em;
   max-width: 500px;
-  margin: 100px auto;
+  margin: auto auto;
   text-align: center;
 }
 
@@ -23,6 +24,32 @@ body {
 .container__header h1 {
   color: #fff;
   font-size: 3.5rem;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.task-list h2 {
+  margin: 0;
+}
+
+.task-list::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.task-list::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .tasks__body {
@@ -38,8 +65,8 @@ body {
   background-color: #423e71;
   width: 100%;
   border-radius: 4px;
-  margin-bottom: 4px;
-  padding: 0.7em 1.5em;
+  margin-bottom: 6px;
+  padding: 0.8em 1.5em;
   color: #fff;
   font-size: 1.2rem;
 }
