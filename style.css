@@ -73,3 +73,12 @@ label {
   color: #fff;
   font-size: 1.8rem;
 }
+
+.trash-icon {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.trash-icon:hover {
+  transform: scale(1.3);
+}
