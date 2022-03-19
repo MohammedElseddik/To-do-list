@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/eca3ff88d7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/eca3ff88d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>To-do-list</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-
-        <header class="container__header">
-            <h1>Todo List</h1>
-            <form class="search">
-                <input class="form-control" type="text" name="search" placeholder="search for a task">
-            </form>
-        </header>
-
-        <ul class="tasks__body">
-            <li>
-                <span>task 1</span>
-                <i class="fa-solid fa-trash-can delete"></i>
-            </li>
-            <li>
-                <span>task 2</span>
-                <i class="fa-solid fa-trash-can delete"></i>
-            </li>
-            <li>
-                <span>task 3</span>
-                <i class="fa-solid fa-trash-can delete"></i>
-            </li>
-        </ul>
-
-        <form class="add__task">
-            <label for="add-task">Add a new todo ...</label>
-            <input type="text" name="add-task" id="add-task">
+      <header class="container__header">
+        <h1>Todo List</h1>
+        <form class="search">
+          <input
+            class="form-control"
+            type="text"
+            name="search"
+            placeholder="search for a task"
+          />
         </form>
+      </header>
 
+      <div class="task-list">
+        <h2>Tasks List</h2>
+      </div>
+
+      <ul class="tasks__body"></ul>
+
+      <form class="add__task">
+        <label for="add-task">Add a new to do task...</label>
+        <input type="text" name="add-task" id="add-task" placeholder="Add a task"/>
+      </form>
     </div>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
